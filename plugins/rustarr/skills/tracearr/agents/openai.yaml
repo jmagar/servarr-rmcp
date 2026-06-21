@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tracearr"
+  short_description: "Monitor Tracearr for Plex, Jellyfin, or Emby streams, analytics, trust scores, alerts, imports, deployment, and public API workflows."
+  default_prompt: "Use $tracearr when working with Tracearr media-server monitoring, plugin configuration, deployment, stream analytics, account-sharing signals, alerts, imports, or API checks."

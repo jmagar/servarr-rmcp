@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plex"
+  short_description: "Browse Plex libraries, search media, and check active sessions."
+  default_prompt: "Use $plex to browse Plex libraries, search media, and check active sessions."

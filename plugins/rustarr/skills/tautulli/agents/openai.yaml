@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tautulli"
+  short_description: "Monitor and analyze Plex Media Server usage via Tautulli..."
+  default_prompt: "Use $tautulli to monitor and analyze Plex Media Server usage via Tautulli."

@@ -24,8 +24,8 @@ plugins/rustarr/
     │   └── SKILL.md
     ├── sonarr/             # Per-service skills, each with a three-tier access
     ├── radarr/             #   ladder (MCP tool -> rustarr CLI -> direct-API
-    ├── prowlarr/           #   script) plus scripts/ and references/
-    ├── overseerr/
+    ├── prowlarr/           #   script) plus scripts/, references/, and
+    ├── overseerr/          #   agents/openai.yaml (Codex interface metadata)
     ├── sabnzbd/
     ├── qbittorrent/
     ├── plex/
@@ -97,7 +97,7 @@ Disabling the plugin mid-session does not stop an already-running monitor; it st
 
 `skills/rustarr/SKILL.md` is the three-tier structured documentation for the generic `rustarr` MCP tool — fleet status plus the generic `api_get`/`api_post` action surface. The AI reads Tier 1 for quick lookups, Tier 2 for parameter details, Tier 3 for multi-step workflows.
 
-Alongside it are ten **per-service skills** — `sonarr`, `radarr`, `prowlarr`, `overseerr`, `sabnzbd`, `qbittorrent`, `plex`, `jellyfin`, `tautulli`, and `tracearr`. Each documents a three-tier access ladder for that service: the rustarr MCP tool first, the `rustarr` CLI as a fallback, and a bundled direct-API script (under the skill's `scripts/`) as a last resort. The scripts read credentials from rustarr's materialized `~/.rustarr/.env` (written by `rustarr setup plugin-hook`), so they reuse the same per-service `userConfig` the MCP server uses — no separate credential file. These skills were merged in from the standalone `arrs` plugin and rewired onto the rustarr surfaces.
+Alongside it are ten **per-service skills** — `sonarr`, `radarr`, `prowlarr`, `overseerr`, `sabnzbd`, `qbittorrent`, `plex`, `jellyfin`, `tautulli`, and `tracearr`. Each documents a three-tier access ladder for that service: the rustarr MCP tool first, the `rustarr` CLI as a fallback, and a bundled direct-API script (under the skill's `scripts/`) as a last resort. The scripts read credentials from rustarr's materialized `~/.rustarr/.env` (written by `rustarr setup plugin-hook`), so they reuse the same per-service `userConfig` the MCP server uses — no separate credential file. Each per-service skill also ships an `agents/openai.yaml` with Codex interface metadata (display name, short description, default prompt). These skills were merged in from the standalone `arrs` plugin and rewired onto the rustarr surfaces.
 
 ## Packaging checklist
 

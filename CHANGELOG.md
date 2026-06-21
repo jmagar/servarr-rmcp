@@ -14,8 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `qbittorrent`, `plex`, `jellyfin`, `tautulli`, and `tracearr` — now ship under
   `plugins/rustarr/skills/`. Each is rewired onto a three-tier access ladder: the
   rustarr MCP tool first, the `rustarr` CLI as a fallback, and a bundled
-  direct-API script (`scripts/`) as a last resort. The fallback scripts read
-  credentials from rustarr's materialized `~/.rustarr/.env` (accepting
+  direct-API script (`scripts/`) as a last resort. Each per-service skill ships
+  `scripts/`, `references/`, and a Codex `agents/openai.yaml` interface file. The
+  fallback scripts read credentials from rustarr's materialized `~/.rustarr/.env`
+  (accepting
   `RUSTARR_<SVC>_*` aliases), so they reuse the same `userConfig` as the MCP
   server with no separate credential file. The generic `rustarr` skill now points
   to these per-service skills and stays focused on fleet status.

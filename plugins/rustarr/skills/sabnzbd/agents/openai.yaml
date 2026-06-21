@@ -1,0 +1,4 @@
+interface:
+  display_name: "SABnzbd"
+  short_description: "Manage Usenet downloads with SABnzbd"
+  default_prompt: "Use $sabnzbd to manage Usenet downloads with SABnzbd."

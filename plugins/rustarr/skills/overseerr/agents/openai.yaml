@@ -1,0 +1,4 @@
+interface:
+  display_name: "Overseerr"
+  short_description: "Search, request, and monitor Overseerr media requests."
+  default_prompt: "Use $overseerr to search, request, and monitor Overseerr media requests."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prowlarr"
+  short_description: "Search indexers and manage Prowlarr"
+  default_prompt: "Use $prowlarr to search indexers and manage Prowlarr."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jellyfin"
+  short_description: "Use for Jellyfin media server management, libraries, playback, metadata, users, sessions, health checks, and troubleshooting."
+  default_prompt: "Use the Jellyfin skill for media server management, libraries, playback, metadata, users, sessions, and health checks."

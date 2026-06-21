@@ -1,0 +1,4 @@
+interface:
+  display_name: "Radarr"
+  short_description: "Managing movies in Radarr"
+  default_prompt: "Use $radarr for managing movies in Radarr."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sonarr"
+  short_description: "Managing TV shows in Sonarr"
+  default_prompt: "Use $sonarr for managing TV shows in Sonarr."
