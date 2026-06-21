@@ -15,7 +15,8 @@ Multi-platform plugin package for the Rustarr MCP server. Contains manifests for
 | `bin/rustarr` | Release binary used by the monitor — populate with `just install` |
 | `hooks/hooks.json` | Lifecycle hook definitions: `SessionStart`, `ConfigChange` |
 | `monitors/monitors.json` | Background health monitor config (requires Claude Code v2.1.105+) |
-| `skills/rustarr/SKILL.md` | Three-tier tool documentation shared by Claude and Codex |
+| `skills/rustarr/SKILL.md` | Generic MCP-tool documentation + fleet overview (shared by Claude and Codex) |
+| `skills/<service>/` | Per-service skills (sonarr, radarr, prowlarr, overseerr, sabnzbd, qbittorrent, plex, jellyfin, tautulli, tracearr): `SKILL.md` + `scripts/` (direct-API fallback) + `references/`. Each documents an MCP -> CLI -> direct-API ladder |
 
 ## Versioning rule
 

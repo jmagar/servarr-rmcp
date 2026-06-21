@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Merged the `arrs` plugin's per-service skills into the rustarr plugin.** Ten
+  per-service skills — `sonarr`, `radarr`, `prowlarr`, `overseerr`, `sabnzbd`,
+  `qbittorrent`, `plex`, `jellyfin`, `tautulli`, and `tracearr` — now ship under
+  `plugins/rustarr/skills/`. Each is rewired onto a three-tier access ladder: the
+  rustarr MCP tool first, the `rustarr` CLI as a fallback, and a bundled
+  direct-API script (`scripts/`) as a last resort. The fallback scripts read
+  credentials from rustarr's materialized `~/.rustarr/.env` (accepting
+  `RUSTARR_<SVC>_*` aliases), so they reuse the same `userConfig` as the MCP
+  server with no separate credential file. The generic `rustarr` skill now points
+  to these per-service skills and stays focused on fleet status.
+- **Added SABnzbd, Tautulli, and Tracearr to the plugin `userConfig`.** The Claude
+  `plugin.json` and `gemini-extension.json` manifests plus the
+  `CLAUDE_PLUGIN_OPTION_* -> RUSTARR_*` setup map now cover `sabnzbd_url` /
+  `sabnzbd_api_key`, `tautulli_url` / `tautulli_api_key`, and `tracearr_url` /
+  `tracearr_token`, so those services can be configured for a plugin-managed local
+  server (and reach the fallback scripts) like the others.
+
 ### Security
 
 - **Hardened the `.env` loader against key injection.** `load_dotenv_defaults`

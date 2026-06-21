@@ -9,8 +9,10 @@ description: >
   "Sonarr queue", "Radarr library", "what's in my download queue", "Plex status",
   "Prowlarr indexers", "check Overseerr requests", "qBittorrent torrents",
   "SABnzbd queue", "Tautulli stats", "is Sonarr healthy", "media stack status",
-  "arr services", "show me what's being downloaded". Always use rustarr for these
-  — do not attempt to reach service APIs directly without it.
+  "arr services", "show me what's being downloaded". Prefer rustarr for these;
+  dedicated per-service skills (sonarr, radarr, prowlarr, overseerr, sabnzbd,
+  qbittorrent, plex, jellyfin, tautulli, tracearr) cover deeper single-service
+  workflows.
 ---
 
 # rustarr — Media Automation Stack
@@ -18,6 +20,15 @@ description: >
 Rust MCP bridge to the `*arr` media stack and related services. Exposes
 service-named MCP tools (`sonarr`, `radarr`, `prowlarr`, and friends). The tool
 name selects the service; credentials are handled server-side.
+
+## Per-service skills
+
+For deeper, single-service workflows, prefer the dedicated per-service skills.
+Each documents a three-tier access ladder — this MCP tool first, the `rustarr`
+CLI next, and a bundled direct-API script only as a last resort: `sonarr`,
+`radarr`, `prowlarr`, `overseerr`, `sabnzbd`, `qbittorrent`, `plex`, `jellyfin`,
+`tautulli`, `tracearr`. This skill stays focused on fleet-wide status and the
+generic action surface below.
 
 ## Actions
 

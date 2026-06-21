@@ -116,6 +116,39 @@
       "description": "qBittorrent Web UI login password. Maps to RUSTARR_QBITTORRENT_PASSWORD.",
       "required": false,
       "sensitive": true
+    },
+    {
+      "name": "sabnzbd_url",
+      "description": "SABnzbd base URL. Maps to RUSTARR_SABNZBD_URL.",
+      "required": false
+    },
+    {
+      "name": "sabnzbd_api_key",
+      "description": "SABnzbd API key. Maps to RUSTARR_SABNZBD_API_KEY.",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "tautulli_url",
+      "description": "Tautulli base URL. Maps to RUSTARR_TAUTULLI_URL.",
+      "required": false
+    },
+    {
+      "name": "tautulli_api_key",
+      "description": "Tautulli API key. Maps to RUSTARR_TAUTULLI_API_KEY.",
+      "required": false,
+      "sensitive": true
+    },
+    {
+      "name": "tracearr_url",
+      "description": "Tracearr base URL. Maps to RUSTARR_TRACEARR_URL.",
+      "required": false
+    },
+    {
+      "name": "tracearr_token",
+      "description": "Tracearr API bearer token. Maps to RUSTARR_TRACEARR_TOKEN.",
+      "required": false,
+      "sensitive": true
     }
   ]
 }
